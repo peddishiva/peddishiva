@@ -1,0 +1,40 @@
+{
+  "github": {
+    "username": "peddishiva",
+    "display_name": "Peddi Shiva",
+    "hostname": "shiva"
+  },
+  "personal": {
+    "os": "Can be adopt to any situation",
+    "status": "Final Year B.Tech CSE (AI-ML)",
+    "university": "CMR Institute of Technology",
+    "location": "Hyderabad, India",
+    "focus": "SDE | AI/ML | Full-Stack Development",
+    "age_dob": "2005-02-22"
+  },
+  "education": {
+    "degree": "B.Tech CSE (AI-ML)",
+    "cgpa": "7.63 / 10",
+    "batch": "2023 - 2027"
+  },
+  "about": {
+    "passionate_about": "Building AI Solutions",
+    "currently_learning": "System Design, Cloud & GenAI",
+    "interests": "AI, Open Source, Automation"
+  },
+  "skills": {
+    "tech_stack": "Python, C, JavaScript, SQL",
+    "frameworks": "React.js, Next.js, Django, FastAPI",
+    "tools": "Git, Docker, N8N, Tableau, VS Code"
+  },
+  "contact": {
+    "email": "peddishiva63@gmail.com",
+    "linkedin": "www.linkedin.com/in/Shivapeddi/",
+    "github": "github.com/peddishiva",
+    "portfolio": "Coming Soon"
+  },
+  "display": {
+    "show_projects": false,
+    "show_portfolio": true
+  }
+}
