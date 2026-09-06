@@ -37,7 +37,7 @@ OWNER_ID = None
 
 
 def daily_readme(birthday):
-    """Return integer age only; the value changes on the birthday."""
+    """Return the user's integer age; it changes only on the birthday."""
     today = datetime.datetime.today()
     years = today.year - birthday.year - (
         (today.month, today.day) < (birthday.month, birthday.day)
@@ -89,11 +89,14 @@ def follower_getter(username):
     }
     """
     data = simple_request(follower_getter.__name__, query, {"login": username})
-    return int(data["data"]["user"]["followers"]["totalCount"])
+    user = data["data"]["user"]
+    if not user:
+        raise RuntimeError(f"GitHub user {username!r} was not found.")
+    return int(user["followers"]["totalCount"])
 
 
 def graph_repos_stars(count_type, owner_affiliation):
-    """Paginate repositories and return repo count or total stars."""
+    """Paginate repositories and return repository count or total stars."""
     query_count("graph_repos_stars")
     query = """
     query($login: String!, $affiliations: [RepositoryAffiliation], $cursor: String) {
@@ -120,8 +123,11 @@ def graph_repos_stars(count_type, owner_affiliation):
             query,
             {"login": USER_NAME, "affiliations": owner_affiliation, "cursor": cursor},
         )
-        repos = data["data"]["user"]["repositories"]
-        total_repos = repos["totalCount"]
+        user = data["data"]["user"]
+        if not user:
+            raise RuntimeError(f"GitHub user {USER_NAME!r} was not found.")
+        repos = user["repositories"]
+        total_repos = int(repos["totalCount"])
         for edge in repos["edges"]:
             total_stars += int(edge["node"]["stargazers"]["totalCount"])
         if not repos["pageInfo"]["hasNextPage"]:
@@ -157,7 +163,10 @@ def recursive_loc(owner, repo_name, addition_total=0, deletion_total=0, my_commi
     repository = data["data"]["repository"]
     if not repository or not repository["defaultBranchRef"]:
         return addition_total, deletion_total, my_commits
-    history = repository["defaultBranchRef"]["target"]["history"]
+    target = repository["defaultBranchRef"]["target"]
+    if not target:
+        return addition_total, deletion_total, my_commits
+    history = target["history"]
     for edge in history["edges"]:
         node = edge["node"]
         author = node.get("author") or {}
@@ -168,9 +177,12 @@ def recursive_loc(owner, repo_name, addition_total=0, deletion_total=0, my_commi
             deletion_total += int(node.get("deletions") or 0)
     if not history["pageInfo"]["hasNextPage"]:
         return addition_total, deletion_total, my_commits
-    query_count("recursive_loc")
     return recursive_loc(
-        owner, repo_name, addition_total, deletion_total, my_commits,
+        owner,
+        repo_name,
+        addition_total,
+        deletion_total,
+        my_commits,
         history["pageInfo"]["endCursor"],
     )
 
@@ -261,10 +273,14 @@ def loc_query(owner_affiliation, comment_size=0, force_cache=False):
     cursor = None
     while True:
         data = simple_request(
-            loc_query.__name__, query,
+            loc_query.__name__,
+            query,
             {"login": USER_NAME, "affiliations": owner_affiliation, "cursor": cursor},
         )
-        repos = data["data"]["user"]["repositories"]
+        user = data["data"]["user"]
+        if not user:
+            raise RuntimeError(f"GitHub user {USER_NAME!r} was not found.")
+        repos = user["repositories"]
         edges.extend(repos["edges"])
         if not repos["pageInfo"]["hasNextPage"]:
             break
@@ -281,7 +297,10 @@ def commit_counter(comment_size=0):
     for line in filename.read_text(encoding="utf-8").splitlines()[comment_size:]:
         parts = line.split()
         if len(parts) >= 3:
-            total += int(parts[2])
+            try:
+                total += int(parts[2])
+            except ValueError:
+                continue
     return total
 
 
@@ -401,8 +420,26 @@ if __name__ == "__main__":
     contrib_data += archived[4]
 
     for filename in ("dark_mode.svg", "light_mode.svg"):
-        svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data)
+        svg_overwrite(
+            filename,
+            age_data,
+            commit_data,
+            star_data,
+            repo_data,
+            contrib_data,
+            follower_data,
+            loc_data,
+        )
 
-    total_time = user_time + age_time + loc_time + commit_time + star_time + repo_time + contrib_time + follower_time
+    total_time = (
+        user_time
+        + age_time
+        + loc_time
+        + commit_time
+        + star_time
+        + repo_time
+        + contrib_time
+        + follower_time
+    )
     print(f"Total function time: {total_time:.4f} s")
     print("GraphQL/API calls:", QUERY_COUNT)
