@@ -16,9 +16,9 @@
     <tspan class="title" x="565" y="58" id="profile_title">peddishiva@shiva</tspan>
     <tspan x="565" y="82" class="cc">────────────────────────────────────────────────────────────────────────</tspan>
 
-    <tspan x="565" y="116" class="key">OS</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_os">Can be adopt to any situation</tspan>
+    <tspan x="565" y="116" class="key">OS</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_os">Adaptable</tspan>
     <tspan x="565" y="143" class="key">Status</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_status">Final Year B.Tech CSE (AI-ML)</tspan>
-    <tspan x="565" y="170" class="key">University</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_university">CMR Institute of Technology</tspan>
+    <tspan x="565" y="170" class="key">University</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_university">CMR Institute of Technology, Hyderabad</tspan>
     <tspan x="565" y="197" class="key">Location</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_location">Hyderabad, India</tspan>
     <tspan x="565" y="224" class="key">Focus</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_focus">SDE | AI/ML | Full-Stack Development</tspan>
 
@@ -46,10 +46,10 @@
     <tspan x="565" y="738" class="key">Portfolio</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_portfolio">Coming Soon</tspan><tspan x="565" y="770" class="section" fill="#0969da">GitHub Stats</tspan>
     <tspan x="565" y="798" class="key">Repos</tspan><tspan id="repo_data_dots" class="cc"> .... </tspan><tspan id="repo_data" class="value">17</tspan>
     <tspan x="800" y="798" class="key">Contributed</tspan><tspan id="contrib_data_dots" class="cc"> .... </tspan><tspan id="contrib_data" class="value">17</tspan>
-    <tspan x="565" y="824" class="key">Stars</tspan><tspan id="star_data_dots" class="cc"> ....... </tspan><tspan id="star_data" class="value">1</tspan>
+    <tspan x="565" y="824" class="key">Stars</tspan><tspan id="star_data_dots" class="cc"> ....... </tspan><tspan id="star_data" class="value">2</tspan>
     <tspan x="800" y="824" class="key">Followers</tspan><tspan id="follower_data_dots" class="cc"> ..... </tspan><tspan id="follower_data" class="value">3</tspan>
-    <tspan x="565" y="850" class="key">Commits</tspan><tspan id="commit_data_dots" class="cc"> ..... </tspan><tspan id="commit_data" class="value">118</tspan>
+    <tspan x="565" y="850" class="key">Commits</tspan><tspan id="commit_data_dots" class="cc"> ..... </tspan><tspan id="commit_data" class="value">119</tspan>
     <tspan x="800" y="850" class="key">LOC</tspan><tspan id="loc_data_dots" class="cc"> ... </tspan><tspan id="loc_data" class="value">977,800</tspan>
-    <tspan x="565" y="876" class="key">+ </tspan><tspan id="loc_add" class="value">994,959</tspan><tspan class="cc">   </tspan><tspan class="key">- </tspan><tspan id="loc_del" class="value">17,159</tspan>
+    <tspan x="565" y="876" class="key">+ </tspan><tspan id="loc_add" class="value">994,961</tspan><tspan class="cc">   </tspan><tspan class="key">- </tspan><tspan id="loc_del" class="value">17,161</tspan>
   </text>
 </svg>
