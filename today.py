@@ -78,7 +78,7 @@ def user_getter(username):
     user = data["data"]["user"]
     if not user:
         raise RuntimeError(f"GitHub user {username!r} was not found.")
-    return {"id": user["id"]}, user["createdAt"]
+    return {"id": user["id"]}
 
 
 def follower_getter(username):
