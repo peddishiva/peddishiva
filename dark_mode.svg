@@ -48,8 +48,8 @@
     <tspan x="800" y="798" class="key">Contributed</tspan><tspan id="contrib_data_dots" class="cc"> .... </tspan><tspan id="contrib_data" class="value">17</tspan>
     <tspan x="565" y="824" class="key">Stars</tspan><tspan id="star_data_dots" class="cc"> ....... </tspan><tspan id="star_data" class="value">2</tspan>
     <tspan x="800" y="824" class="key">Followers</tspan><tspan id="follower_data_dots" class="cc"> ..... </tspan><tspan id="follower_data" class="value">3</tspan>
-    <tspan x="565" y="850" class="key">Commits</tspan><tspan id="commit_data_dots" class="cc"> ..... </tspan><tspan id="commit_data" class="value">119</tspan>
-    <tspan x="800" y="850" class="key">LOC</tspan><tspan id="loc_data_dots" class="cc"> ... </tspan><tspan id="loc_data" class="value">977,800</tspan>
-    <tspan x="565" y="876" class="key">+ </tspan><tspan id="loc_add" class="value">994,961</tspan><tspan class="cc">   </tspan><tspan class="key">- </tspan><tspan id="loc_del" class="value">17,161</tspan>
+    <tspan x="565" y="850" class="key">Commits</tspan><tspan id="commit_data_dots" class="cc"> ..... </tspan><tspan id="commit_data" class="value">118</tspan>
+    <tspan x="800" y="850" class="key">LOC</tspan><tspan id="loc_data_dots" class="cc"> ... </tspan><tspan id="loc_data" class="value">970,496</tspan>
+    <tspan x="565" y="876" class="key">+ </tspan><tspan id="loc_add" class="value">987,637</tspan><tspan class="cc">   </tspan><tspan class="key">- </tspan><tspan id="loc_del" class="value">17,141</tspan>
   </text>
 </svg>
