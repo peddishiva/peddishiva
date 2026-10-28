@@ -44,12 +44,12 @@
     <tspan x="565" y="711" class="key">GitHub</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_github">github.com/peddishiva</tspan>
 
     <tspan x="565" y="738" class="key">Portfolio</tspan><tspan class="cc">: </tspan><tspan class="value" id="profile_portfolio">Coming Soon</tspan><tspan x="565" y="770" class="section" fill="#0969da">GitHub Stats</tspan>
-    <tspan x="565" y="798" class="key">Repos</tspan><tspan id="repo_data_dots" class="cc"> .... </tspan><tspan id="repo_data" class="value">22</tspan>
-    <tspan x="800" y="798" class="key">Contributed</tspan><tspan id="contrib_data_dots" class="cc"> .... </tspan><tspan id="contrib_data" class="value">22</tspan>
+    <tspan x="565" y="798" class="key">Repos</tspan><tspan id="repo_data_dots" class="cc"> .... </tspan><tspan id="repo_data" class="value">20</tspan>
+    <tspan x="800" y="798" class="key">Contributed</tspan><tspan id="contrib_data_dots" class="cc"> .... </tspan><tspan id="contrib_data" class="value">20</tspan>
     <tspan x="565" y="824" class="key">Stars</tspan><tspan id="star_data_dots" class="cc"> ....... </tspan><tspan id="star_data" class="value">1</tspan>
     <tspan x="800" y="824" class="key">Followers</tspan><tspan id="follower_data_dots" class="cc"> ..... </tspan><tspan id="follower_data" class="value">4</tspan>
-    <tspan x="565" y="850" class="key">Commits</tspan><tspan id="commit_data_dots" class="cc"> ..... </tspan><tspan id="commit_data" class="value">153</tspan>
-    <tspan x="800" y="850" class="key">LOC</tspan><tspan id="loc_data_dots" class="cc"> ... </tspan><tspan id="loc_data" class="value">998,135</tspan>
-    <tspan x="565" y="876" class="key">+ </tspan><tspan id="loc_add" class="value">1,021,049</tspan><tspan class="cc">   </tspan><tspan class="key">- </tspan><tspan id="loc_del" class="value">22,914</tspan>
+    <tspan x="565" y="850" class="key">Commits</tspan><tspan id="commit_data_dots" class="cc"> ..... </tspan><tspan id="commit_data" class="value">140</tspan>
+    <tspan x="800" y="850" class="key">LOC</tspan><tspan id="loc_data_dots" class="cc"> ... </tspan><tspan id="loc_data" class="value">999,317</tspan>
+    <tspan x="565" y="876" class="key">+ </tspan><tspan id="loc_add" class="value">1,022,231</tspan><tspan class="cc">   </tspan><tspan class="key">- </tspan><tspan id="loc_del" class="value">22,914</tspan>
   </text>
 </svg>
